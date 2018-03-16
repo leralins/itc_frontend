@@ -44,8 +44,7 @@
         ]
 
         function filterFelmales(array) {
-            let FemalesOrNot = array.filter(array => array.gender == "Женщина");
-            return FemalesOrNot;
+            return array.filter(array => array.gender == "Женщина")
         }
         console.log(filterFelmales(people))
 
@@ -72,42 +71,36 @@
         console.log(getQuadrant(4, -7))
         console.log(getQuadrant(0, 0))
 
-        function PlusAll(...args) {
+        function plusAll(...args) {
             return args.reduce((sum, current) => sum + current)
         }
-        console.log(PlusAll(1, 2, 3, 4, 5))
+        console.log(plusAll(1, 2, 3, 4, 5))
 
-        function MultiplyAll(...args) {
+        function multiplyAll(...args) {
             return args.reduce((multi, current) => multi * current)
         }
-        console.log(MultiplyAll(1, 2, 3, 4, 5))
+        console.log(multiplyAll(1, 2, 3, 4, 5))
 
-        function ObjectToQueryString(object) {
+        function objectToQueryString(object) {
             let urlstr = ""
-            let num = 0;
             for (key in object) {
-                if (num == 0) {
-                    urlstr = `${key}=${object[key]}`
-                } else {
-                    urlstr = `${urlstr}&${key}=${object[key]}`
-                }
-                num++
+                urlstr = `${urlstr}&${key}=${object[key]}`
             }
-            return encodeURI(urlstr)
+            return encodeURI(urlstr.slice(1))
         }
-        console.log(ObjectToQueryString({
+        console.log(objectToQueryString({
             name1: 'John',
             name2: 'Федор'
         }))
 
-        function getIn(obj, path, default_value) {
+        function getIn(obj, path, defaultValue) {
             property = path.reduce((obj, current) => {
                 return obj[current]
             }, obj)
             if (property != undefined) {
                 return property
             } else {
-                return default_value
+                return defaultValue
             }
         }
         const person = {
