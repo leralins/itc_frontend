@@ -16,7 +16,7 @@ const postsLoading = () => {
                     post.data.thumbnail == 'self'
                 ) {
                     postImages.src = 
-                        'https://ru.inettools.net/upload/Q7tCv6FnB9qlIDhsCxGPGeSrhHZ17Cauep4azyCr/tenor.aheYG.gif';
+                        'https://media.tenor.com/images/b9a77e5990b598c1f13382e52e0b1b02/tenor.gif';
                 } else postImages.src = post.data.thumbnail;
 
                 title.innerHTML = post.data.title; /*задаём, что должно показываться юзеру*/
