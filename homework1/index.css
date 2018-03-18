@@ -1,0 +1,53 @@
+body {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    background: url(http://hdblackwallpaper.com/wallpaper/2015/07/black-and-gold-wallpaper-tumblr-11-desktop-background.png);
+    background-size: 100%;
+    position: relative;
+}
+
+.postCard {
+    min-width: 100px;
+    max-width: 1000px;
+    padding: 10px;
+    margin: 0 auto;
+    background:  rgba(48, 48, 51, 0.726);
+    display: flex;
+    align-items: flex-start;
+    border-bottom: solid white;
+    border-width: 1px;
+}
+.postCard:last-child {
+    border: none;
+}
+.postCard:hover {
+    background: rgba(99, 99, 104, 0.726);
+}
+.pageheader {
+    color: #000000;
+    font-size: 80px;
+    text-align: center;
+    font-weight: 500;
+    background: url(https://images-na.ssl-images-amazon.com/images/I/51Mn8-bGl-L._SX355_.jpg);
+}
+.title {
+    color: #ffffff;
+    font-size: 32px;
+    margin-left: 40px;
+    display: block;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.comments {
+    font-size: 20px;
+    color: #ffffff;
+    margin-left: 40px;
+    text-decoration: none;
+}
+.description {
+    color: #ffffff;
+    font-size: 14px;
+    font-style: italic;
+    margin-left: 40px;
+}
+
