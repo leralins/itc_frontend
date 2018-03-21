@@ -1,0 +1,115 @@
+<html>
+
+<head>
+    <title>Homework №0</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script>
+        function plus(x, y) {
+            return x + y;
+        }
+        console.log(plus(1, 2));
+
+        function multiply(x, y) {
+            let sum = 0
+            for (var i = 0; i < y; i++) {
+                sum = plus(sum, x);
+            }
+            return sum;
+        }
+        console.log(multiply(3, 10));
+
+        function mergeArrays(array1, array2) {
+            return array1.concat(array2)
+        }
+        console.log(mergeArrays([1, 2, 3], [4, 5]))
+
+        const people = [{
+                "name": "Лера",
+                "gender": "Женщина",
+                "bestfilm": "Who Am I"
+            },
+            {
+                "name": "Вася",
+                "gender": "Мужчина",
+                "bestfilm": "Брат 2"
+            },
+            {
+                "name": "Ксюша",
+                "gender": "Женщина",
+                "bestfilm": "La La Land"
+            }
+        ]
+
+        function filterFelmales(array) {
+            return array.filter(array => array.gender == "Женщина")
+        }
+        console.log(filterFelmales(people))
+
+        function getQuadrant(x, y) {
+            if (x > 0 && y > 0)
+                quadrant = "первая четверть";
+            else if (x > 0 && y < 0)
+                quadrant = "четвертая четверь";
+            else if (x < 0 && y < 0)
+                quadrant = "третья четверть";
+            else if (x < 0 && y > 0)
+                quadrant = "вторая четверть";
+            else if (x == 0 && y == 0)
+                quadrant = "начало координат";
+            else if (x == 0 && y != 0)
+                quadrant = "точка лежит на оси Х";
+            else if (x != 0 && y == 0)
+                quadrant = "точка лежит на оси У";
+            return quadrant;
+        }
+        console.log(getQuadrant(1, 2))
+        console.log(getQuadrant(-1, 2))
+        console.log(getQuadrant(-2, -3))
+        console.log(getQuadrant(4, -7))
+        console.log(getQuadrant(0, 0))
+
+        function plusAll(...args) {
+            return args.reduce((sum, current) => sum + current)
+        }
+        console.log(plusAll(1, 2, 3, 4, 5))
+
+        function multiplyAll(...args) {
+            return args.reduce((multi, current) => multi * current)
+        }
+        console.log(multiplyAll(1, 2, 3, 4, 5))
+
+        function objectToQueryString(object) {
+            let urlstr = ""
+            for (key in object) {
+                urlstr = `${urlstr}&${key}=${object[key]}`
+            }
+            return encodeURI(urlstr.slice(1))
+        }
+        console.log(objectToQueryString({
+            name1: 'John',
+            name2: 'Федор'
+        }))
+
+        function getIn(obj, path, defaultValue) {
+            property = path.reduce((obj, current) => {
+                return obj[current]
+            }, obj)
+            if (property != undefined) {
+                return property
+            } else {
+                return defaultValue
+            }
+        }
+        const person = {
+            address: {
+                street: "Кутузовский проспект"
+            }
+        }
+        console.log(getIn(person, ['address', 'street'], 'Бомж'))
+    </script>
+</body>
+
+</html>
